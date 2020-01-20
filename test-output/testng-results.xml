@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="30399" started-at="2020-01-20T14:11:55Z" finished-at="2020-01-20T14:12:25Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="30399" started-at="2020-01-20T14:11:55Z" finished-at="2020-01-20T14:12:25Z">
+      <class name="com.supplyhouse.model.ModelValidation">
+        <test-method status="PASS" signature="browser()[pri:0, instance:com.supplyhouse.model.ModelValidation@39aeed2f]" name="browser" is-config="true" duration-ms="12904" started-at="2020-01-20T09:11:55Z" finished-at="2020-01-20T09:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browser -->
+        <test-method status="PASS" signature="model()[pri:0, instance:com.supplyhouse.model.ModelValidation@39aeed2f]" name="model" duration-ms="16675" started-at="2020-01-20T09:12:08Z" finished-at="2020-01-20T09:12:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- model -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.supplyhouse.model.ModelValidation@39aeed2f]" name="teardown" is-config="true" duration-ms="809" started-at="2020-01-20T09:12:24Z" finished-at="2020-01-20T09:12:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.supplyhouse.model.ModelValidation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
