@@ -12,6 +12,7 @@ public class ModelValidation {
 	 static WebDriver driver;
 		@BeforeTest
 		public void browser() throws Exception{
+			//Opens the chrome browser
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.get(com.supplyhouse.model.Util.url);
@@ -20,14 +21,18 @@ public class ModelValidation {
 		}
 		@Test
 		public void model() throws Exception {
+			//Fetching the data from excel
 			List<String> modelNumber = com.supplyhouse.model.Util.ExcelReader(com.supplyhouse.model.Util.FILE_PATH, "Data");
 			System.out.println(modelNumber);
 			for(int i=0;i<modelNumber.size();i++){	
+				//Entering the model number
 				driver.findElement(By.id("model-number")).sendKeys(modelNumber.get(i));
+				//Clicking on search button
 				driver.findElement(By.xpath("//button[contains(@class,'search-btn')]")).click();
 				Thread.sleep(1000);
 				try{
 				String value = driver.findElement(By.xpath("//div[@class='desc-sku']/strong")).getText();
+				//Validation of model number availability
 				if(value.contentEquals(modelNumber.get(i))){
 					System.out.println("Search Result displays model number entered:"+ modelNumber.get(i));
 				}else{
@@ -44,6 +49,7 @@ public class ModelValidation {
 		}
 		@AfterTest
 		public void teardown() {
+			//close the browser
 			driver.quit();
 		}
 }
